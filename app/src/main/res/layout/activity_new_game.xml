@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewGame">
+
+    <!-- Buttons -->
+
+
+    <!-- Computer dice set -->
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:text="COMPUTER"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.081">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="60dp"
+        android:text="PLAYER"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.161"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/points"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="H:0 / C:0"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.044"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.026">
+
+    </TextView>
+
+    <TextView
+        android:id="@+id/computerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="620dp"
+        android:text="Computer Score: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.827"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.206">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/playerScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="64dp"
+        android:text="Player Score: "
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.082">
+
+    </TextView>
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+        <Button
+            android:id="@+id/throw_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="throwBtnClickListener"
+            android:text="Throw" />
+
+        <Button
+            android:id="@+id/score_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:onClick="scoreBtnClickListener"
+            android:text="Score" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/linearLayout3"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/computerDice1"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/computerDice2"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+        <ImageView
+            android:id="@+id/computerDice3"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+        <ImageView
+            android:id="@+id/computerDice4"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+        <ImageView
+            android:id="@+id/computerDice5"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+
+    </LinearLayout>
+
+    <!-- Player dice set -->
+    <LinearLayout
+        android:id="@+id/linearLayout4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
+        tools:ignore="MissingConstraints">
+
+        <ImageView
+            android:id="@+id/playerDice1"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one">
+
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/playerDice2"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+        <ImageView
+            android:id="@+id/playerDice3"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+        <ImageView
+            android:id="@+id/playerDice4"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+        <ImageView
+            android:id="@+id/playerDice5"
+            android:layout_width="74dp"
+            android:layout_height="74dp"
+            android:paddingHorizontal="5dp"
+            android:src="@drawable/face_one"></ImageView>
+
+
+    </LinearLayout>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
